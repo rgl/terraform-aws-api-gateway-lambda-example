@@ -1,11 +1,11 @@
 terraform {
-  required_version = "1.7.5"
+  required_version = "1.8.0"
   required_providers {
     # see https://registry.terraform.io/providers/hashicorp/aws
     # see https://github.com/hashicorp/terraform-provider-aws
     aws = {
       source  = "hashicorp/aws"
-      version = "5.44.0"
+      version = "5.45.0"
     }
     # see https://registry.terraform.io/providers/kreuzwerker/docker
     # see https://github.com/kreuzwerker/terraform-provider-docker

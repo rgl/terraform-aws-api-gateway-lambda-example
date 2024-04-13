@@ -9,7 +9,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           # renovate: datasource=github-releases depName=hashicorp/terraform
-          terraform_version: "1.7.5"
+          terraform_version: "1.8.0"
       - name: terraform fmt check
         run: terraform fmt -check -diff
   validate:
@@ -20,11 +20,11 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           # renovate: datasource=github-releases depName=hashicorp/terraform
-          terraform_version: "1.7.5"
+          terraform_version: "1.8.0"
       - name: Init
-        run: run terraform init -lockfile=readonly
+        run: terraform init -lockfile=readonly
       - name: Validate
-        run: run terraform validate
+        run: terraform validate
   lint:
     name: Lint
     runs-on: ubuntu-22.04
@@ -33,7 +33,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           # renovate: datasource=github-releases depName=hashicorp/terraform
-          terraform_version: "1.7.5"
+          terraform_version: "1.8.0"
       - uses: terraform-linters/setup-tflint@v4
         name: Setup
         with:
